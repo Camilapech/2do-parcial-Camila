@@ -1,0 +1,10 @@
+#card{
+    margin: 0 auto 32 px;
+    
+}
+#formularios{
+    margin-bottom: 32px;
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
