@@ -6,10 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La patisserie</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
-    </head>
+   <style>
+       #crearFormulario {
+           display: none;
+       }
+   </style>
+</head>
 
 <body style="background-image:url(https://i.pinimg.com/564x/86/41/66/864166143c1a2023375d514367a92927.jpg);">
     <nav class="navbar navbar-expand-lg navbar-light" style= "background-color:lightcoral; font-family: cursive;">
@@ -43,7 +48,7 @@
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li> -->
             </ul>
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="sumar()">Orden</button>     
+                <button id="crearBtn" class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="mostrarFormulario()">Crear</button>     
         </div>
     </nav>
 
@@ -56,44 +61,32 @@
       </div>
 
     <main> 
-        <div class="container" id="formularios">
+        <div class="container"> 
             <div class="row">
                 <div class="col">
-                    <form id="crearformulario">
+                    <form id="crearFormulario">
                         <div class="form-group">
-                            <label for="titleform">Nombre del postre</label>
-                            <input type="text" class="form-control" id="titleform" placeholder="Escribe el nombre del postre">
+                            <label for="formTitle">Nombre del postre</label>
+                            <input type="text" class="form-control" id="formTitle"  name="form-Title" placeholder="Escribe el nombre del postre">
                           </div>
                           <div class="form-group">
-                            <label for="titleform">Portada del postre</label>
-                            <input type="url" class="form-control" id="titleform" placeholder="Escribe la dirección de la portada del postre => https://fb.com/.....">
+                            <label for="formImage">Portada del postre</label>
+                            <input type="url" class="form-control" id="formImage" placeholder="Solamente enlaces web" name="formImage">
                           </div>
                           <div class="form-group">
-                            <label for="formdescription">Descripción del postre</label>
-                            <textarea class="form-control" id="formdescription" rows="3"></textarea>
+                            <label for="formDescription">Descripción del postre</label>
+                            <textarea class="form-control" id="formDescription" rows="3" name="formDescription"></textarea>
                           </div>
-                          <button type="submit" class="btn btn-primary">Crear</button>
+                          <button class="btn btn-success" type="submit" id="submitCrearFormulario" style="background-color:rgba(245, 168, 178, 0.89); border-color: rgba(245, 168, 178, 0.89);">Enviar</button>
                     </form>
                 </div>
             </div>
         </div>
        
-    <div class="container" id="postres">
+    <div class="container" id="cards">
         <div class="row">
             <div class="col-sm">
-                <div class="card" style="width: 18rem; background-color:rgba(245, 168, 178, 0.89); margin: 30px;">
-                    <img src="https://placeralplato.com/files/2016/06/eclairs-640x480.jpg?width=1200&enable=upscale" class="card-img-top" alt="Pan Eclaire"width="400px" height="300px" >
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-family: cursive;">Eclaire</h5>
-                        <p class="card-text" style="font-family: 'Times New Roman', Times, serif; " >Eclaire de chocolate</p>
-                        <p class="card-text"style="font-family: 'Times New Roman', Times, serif;">-El tradicional eclaire de la casa, hecho con harina de avena y chocolate mexicano</p>
-                        <a href="#" class="btn btn-primary" style="background-color: rgba(236, 186, 110, 0.89); border-color:rgba(236, 186, 110, 0.89);font-family: 'Times New Roman', Times, serif; ">Ordenar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;background-color:rgba(245, 168, 178, 0.89); margin: 30px; ">
+                <div class="card" style="width: 18rem;background-color:rgba(245, 168, 178, 0.89); ">
                     <img src="http://3.bp.blogspot.com/-irWwYun4yk4/VUCHcCzjPuI/AAAAAAAA7Js/DtYk_D4hJME/s1600/IMG_6925.jpg" class="card-img-top" alt="Pan Cupcake"width="400px" height="300px" >
                     <div class="card-body">
                         <h5 class="card-title"style="font-family: cursive;" >Cupcake</h5>
@@ -103,55 +96,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</main>
 
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;background-color:rgba(245, 168, 178, 0.89); margin: 30px; ">
-                    <img src="https://irecetasfaciles.com/wp-content/uploads/2019/09/pastel-tres-leches.jpg" class="card-img-top" alt="Pan pastel" width="200px" height="300px" >
-                    <div class="card-body">
-                        <h5 class="card-title"style="font-family: cursive;" >Pastel</h5>
-                        <p class="card-text"style="font-family: 'Times New Roman', Times, serif; " >Pastel de tres leches</p>
-                        <p class="card-text"style="font-family: 'Times New Roman', Times, serif;">-Pastel de 2 capas de pan, ligeramente húmedo con leche pasteurizada y deslactosada light</p>
-                        <a href="#" class="btn btn-primary" style="background-color: rgba(236, 186, 110, 0.89); border-color:rgba(236, 186, 110, 0.89);font-family: 'Times New Roman', Times, serif; " >Ordenar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;background-color:rgba(245, 168, 178, 0.89); margin: 30px;">
-                    <img src="https://www.hola.com/imagenes/cocina/recetas/20200610169873/brownie-mediterraneo/0-834-598/brownie-aceite-m.jpg" class="card-img-top" alt="Pan brownie" width="200px" height="300px">
-                    <div class="card-body">
-                        <h5 class="card-title"style="font-family: cursive;" >Brownie</h5>
-                        <p class="card-text"style="font-family: 'Times New Roman', Times, serif; " >Brownie extremo</p>
-                        <p class="card-text"style="font-family: 'Times New Roman', Times, serif;">-Brownie explosivo, hecho a base de avena y relleno de fudge de chocolate hersheys</p>
-                        <a href="#" class="btn btn-primary"  style="background-color: rgba(236, 186, 110, 0.89); border-color:rgba(236, 186, 110, 0.89);font-family: 'Times New Roman', Times, serif; ">Ordenar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;background-color:rgba(245, 168, 178, 0.89); margin: 30px; ">
-                    <img src="https://www.revistaambigu.com/wp-content/uploads/2020/06/Rosca-Brioche-a.jpg" class="card-img-top" alt="Pan Rosca"width="200px" height="300px" >
-                    <div class="card-body">
-                        <h5 class="card-title"style="font-family: cursive;" >Rosca</h5>
-                        <p class="card-text"style="font-family: 'Times New Roman', Times, serif;" >Rosca de pan brion che</p>
-                        <p class="card-text"style="font-family: 'Times New Roman', Times, serif;">-Rosca de un suave pan brionche del día, con glaseado sin azúcar de monkfruit por encima </p>
-                        <a href="#" class="btn btn-primary" style="background-color: rgba(236, 186, 110, 0.89); border-color:rgba(236, 186, 110, 0.89);font-family: 'Times New Roman', Times, serif; "  >Ordenar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm">
-                <div class="card" style="width: 18rem;background-color:rgba(245, 168, 178, 0.89); margin: 30px; ">
-                    <img src="https://cdn.queapetito.com/wp-content/uploads/2019/08/croissant-relleno-de-chocolate-600x469.jpg" class="card-img-top" alt="Pan croissant" width="200px" height="300px">
-                    <div class="card-body">
-                        <h5 class="card-title"style="font-family: cursive;" >Croissant</h5>
-                        <p class="card-text"style="font-family: 'Times New Roman', Times, serif; " >Croissant de chocolate</p>
-                        <p class="card-text"style="font-family: 'Times New Roman', Times, serif;">-Croissant con hojaldre original, relleno de chocolate con leche bajo en azúcar</p>
-                        <a href="#" class="btn btn-primary" style="background-color: rgba(236, 186, 110, 0.89); border-color:rgba(236, 186, 110, 0.89);font-family: 'Times New Roman', Times, serif; " >Ordenar</a>
-                    </div>
-                </div>
-            </div>
-            </main>
+            
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
