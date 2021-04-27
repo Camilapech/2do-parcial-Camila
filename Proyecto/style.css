@@ -1,5 +1,5 @@
 body {
-    background-color: #17181b;
+    background-color: #1b1917;
 }
 h1 {
     text-align: center;
@@ -15,57 +15,27 @@ header {
     text-align: center;
 }
 
-@media (min-width : 750px) {
+@media (min-width : 350px) {
     header {
         text-align: left;
     }
 }
 
-.borrar-platilo {
-    background-color: #fbaf32;
-    border-radius: 50%;
-    padding: 5px 10px;
-    text-decoration: none;
-    color:rgb(71, 71, 71);
-    font-weight: bold;
-
-}
 
 ul {
     list-style: none;
 }
 
 .hero {
-    background-image: url(../img/hero.jpg);
+    background-image: url(../Proyecto/imagenes/fondo3.jpg);
     height: 551px;
 }
 .encabezado {
     margin: 30px 0;
     color: white;
 }
-.submenu {
-    position: relative;
-}
-.submenu #carrito{
-    display: none;
-}
-.submenu:hover #carrito{
-    display: block;
-    color: white;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    z-index: 1;
-    background: #17181b;
-    padding: 20px;
-}
-.vacio {
-    padding: 10px;
-    background-color: #fbaf32;
-    text-align: center;
-    border-radius: 10px;
-    color: rgb(255, 255, 255);
-}
+
+
 .button {
     background-color: #fbaf32;
     color: rgb(255, 255, 255);
@@ -118,16 +88,6 @@ ul {
     .icono {
         margin-bottom: 0;
     }
-}
-
-.icono1 {
-    background-image: url(../img/icono1.png);
-}
-.icono2 {
-    background-image: url(../img/icono2.png);
-}
-.icono3 {
-    background-image: url(../img/icono3.png);
 }
 
 #lista-platillos .row {

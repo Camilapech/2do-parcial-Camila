@@ -8,61 +8,109 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="squeleto.css">
   <link rel="stylesheet" href="normalize.css">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+  
 
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="row">
-        <div class="four columns">
-          <h1>
-            <img src="imagenes/imagenlogo.jpg" alt>
-            "burger"
-          </h1>
-        </div>
-        <div cllass="two columns u-pull-right">
-          <ul>
-            <li class="submenu">
-              <img src="imagenes/carros.png" alt>
-            <div id="carrito">
-              <p class="vacio">
-                carro vacio
-              </p>
-              <table class="u-full-width">
-                <thead>
-                    <tr>
-                        <th>Imagen</th>
-                        <th>Platillos</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="imagenes/hamburguesasenci.png" width="100">
-                        </td>
-                        <td>Hamburguesa de helado</td>
-                        <td>$15</td>
-                        <td><a href="#" class="borrar-platillo">X</a></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="imagenes/heladohambur.jpg" width="100">
-                        </td>
-                        <td>Hamburguesa sencilla</td>
-                        <td>$15</td>
-                        <td><a href="#" class="borrar-platillo">X</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            </div>
-            </li>
-          </ul>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(238, 142, 52);">
+    <a class="navbar-brand" href="#" style="font-size: 40px; text-align: center;" ><strong>HAMBURMONSTER</strong></a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        
+          <a href="conocer.html" style="border-radius: 7px; border-color:white; background-color: white; box-shadow: none; color: black; width: 120px; height: 35px; text-align: center; font-size: 19px; margin-left: 610px;"><strong>Conócenos</strong></a>
+          
+        
+          
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="border-color: white;color:white; border-radius: 20px;">Search</button>
+      </form>
+    </div>
+  </nav>
+  
+              
+<div class="lista-platillos">
+  <h1 class="encabezado">ordena en linea</h1>
 
-        </div>
+  
+
+  <div class="row">
+      <div class="four columns">
+          <div class="card">
+              <img src="imagenes/hamburguesasenci.png" class="imagen-platillo u-full-width">
+              <div class="info-card">
+                  <h4>Hamburguesa sencilla</h4>
+                  <p>Bebida ilimitada</p>
+                  <img src="imagenes/5estre.png">
+                  <p class="precio">$50 <span class="u-pull-right">$15</span> </p>
+                  <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar al carrito</a>
+              </div>
+          </div>
+      </div>
+      <div class="four columns">
+          <div class="card">
+              <img src="imagenes/papashambur.jpg" class="imagen-platillo u-full-width">
+              <div class="info-card">
+                  <h4>Hamburguesa con papas</h4>
+                  <p>Bebida ilimitada</p>
+                  <img src="imagenes/5estre.png">
+                  <p class="precio">$50 <span class="u-pull-right">$15
+
+                  </span>
+                 </p>
+                  <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar al carrito</a>
+              </div>
+          </div>
+      </div>
+      <div class="four columns">
+          <div class="card">
+              <img src="imagenes/heladohambur.jpg" class="imagen-platillo u-full-width">
+              <div class="info-card">
+                  <h4>Hamburguesa con helado</h4>
+                  <p>Bebida ilimitada</p>
+                  <img src="imagenes/estrellas.png">
+                  <p class="precio">$50 
+                    <span class="u-pull-right">$15</span> </p>
+                  <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar al carrito</a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="four columns">
+        <nav class="menu">
+          <a class="enlace" href="#">
+            Ordena en linea
+          </a>
+          <a class="enlace" href="#">
+            pide a domicilio
+          </a><a class="enlace" href="#">
+            Llamanos
+          </a><a class="enlace" href="#">
+            Menú
+          </a><a class="enlace" href="#">
+            Bebidas
+          </a>
+
+        </nav>
       </div>
     </div>
-  </header>
+  </div>
+</footer>
+
 
 </body>
 
