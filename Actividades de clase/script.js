@@ -14,6 +14,34 @@ function sumar () {
     }
 }
 
+function crearcards(){
+    var cards = document.querySelector('#cards .row')
+    cards.innerHTML = ''
+
+    if (postres) {
+        var listadodepostres = JSON.parse( postres )
+
+        for(var i = 0; i < listadodepostres.length; i ++) {
+            var postre = listadodepostres[i]
+            var htmlCard = `
+            <div id="card" class="card" style="width: 18rem;">
+                    <img src="${postre.imagen}" alt="Portada de ${postre.titulo}" >
+                    <div class="card-body">
+                        <h5 class="card-title" >${postre.titulo}</h5>
+                        <p class="card-text" >${postre.descripcion}</p>
+                        <a href="#" class="btn btn-primary">Editar/a>
+                    </div>
+                </div>`
+
+                cards.innerHTML += htmlCard
+
+            
+
+        }
+    }
+ }
+crearcards()
+
 var verFormulario = false
 
 function mostrarFormulario() {
@@ -45,25 +73,25 @@ crearFormulario.addEventListener('submit', function(e) {
     e.preventDefault()
     
     var formulario = new FormData(crearFormulario)
-    var postre = {
+    var postres = {
         'titulo' : formulario.get('formTitle'),
         'imagen' : formulario.get('formImage'),
         'descripcion' : formulario.get('formDescripcion')
     } 
     if (!postres) {
         var listadodepostres = [
-            postre
+            postres
         ]
 
         localStorage.setItem('postres', JSON.stringify(listadodepostres))
     } else {
         var listadodepostres = JSON.parse(postres)
-        listadodepostres.push(postre)
+        listadodepostres.push(postres)
         localStorage.setItem('postres', JSON.stringify(listadodepostres))
     }
 
     crearFormulario.reset()
     mostrarFormulario()
+    crearcards()
 } )
 
-// sumar(num1, num2)
