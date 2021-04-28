@@ -15,11 +15,6 @@ header {
     text-align: center;
 }
 
-@media (min-width : 350px) {
-    header {
-        text-align: left;
-    }
-}
 
 .card {
     margin: 32px auto;
@@ -40,66 +35,9 @@ ul {
 }
 
 
-.button {
-    background-color: #fbaf32;
-    color: rgb(255, 255, 255);
-}
-.contenido-hero {
-    margin-top: 80px;
-    color: white;
-}
-.contenido-hero form {
-    position: relative;
-    margin-bottom: 0;
-}
-.contenido-hero form #buscador {
-    height: 50px;
-    margin-bottom: 0;
-}
-.contenido-hero form .submit-buscador {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    padding: 0;
-    display: block;
-    text-indent: -9999px;
-    width: 50px;
-    background-image: url(../Proyecto/imagenes/lupa.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-    border: none;
-}
 
-.barra {
-    padding: 20px 0;
-    background: #fbaf32;
-    background: -webkit-linear-gradient(left, #b95a00 0%,#ad5400 100% );
-}
-.barra p {
-    margin: 0;
-    color: white;
-}
-.icono {
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 60px;
-    background-size: 30px;
-    margin-bottom: 40px;
-    text-align: center;
-}
-@media (min-width: 750px) {
-    .icono {
-        margin-bottom: 0;
-    }
-}
 
-#lista-platillos .row {
-    margin-bottom: 20px;
-}
-.agregar-carrito{
-    margin: 10px 0;
-}
+
 .card {
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.05);
