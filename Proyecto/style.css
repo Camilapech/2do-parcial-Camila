@@ -21,6 +21,10 @@ header {
     }
 }
 
+.card {
+    margin: 32px auto;
+    
+}
 
 ul {
     list-style: none;
