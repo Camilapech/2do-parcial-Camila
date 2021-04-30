@@ -4,7 +4,7 @@ if(!postres) {
     localStorage.setItem('peliculas', [])
 }
 
-function crearcards(){
+function crearCards(){
     var cards = document.querySelector('#cards .row')
     cards.innerHTML = ''
 
@@ -21,12 +21,12 @@ function crearcards(){
                         <a href="#" class="btn btn-primary">Editar</a>
                     </div>
                 </div>`
-            cards.innerHTML += htmlCard
+            Cards.innerHTML += htmlCard
 
         }
     }
  }
-crearcards()
+crearCards()
 
 var verFormulario = false
 
@@ -58,9 +58,9 @@ crearFormulario.addEventListener('submit', function(e) {
     
     var formulario = new FormData(crearFormulario)
     var postre = {
-        titulo : formulario.get('formTitle'),
-        imagen : formulario.get('formImage'),
-        descripcion : formulario.get('formDescription')
+        title : formulario.get('formTitle'),
+        image : formulario.get('formImage'),
+        description : formulario.get('formDescription')
     } 
 
     console.log(postres)
@@ -79,6 +79,6 @@ crearFormulario.addEventListener('submit', function(e) {
 
     crearFormulario.reset()
     mostrarFormulario()
-    crearcards()
+    crearCards()
 } )
 
