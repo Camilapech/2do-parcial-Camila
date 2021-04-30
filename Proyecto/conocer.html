@@ -70,16 +70,13 @@
         <div style="margin-bottom: 100px; box-sizing: border-box;">
             <form action="" class="formulario">
                 <h2 class="formulario-titulo">Contáctenos</h2>
-                <input type="text" class="formulario-input">
+                <input type="text" name="name" id="name" class="formulario-input">
                 <label for="" class="formulario-label">Nombre</label>
-                <input type="text" class="formulario-input">
+                <input type="text" name="correo" id="correo" class="formulario-input">
                 <label for="" class="formulario-label">Correo</label>
-                <input type="text" class="formulario-input">
+                <input type="text" name="tel" id="tel" class="formulario-input">
                 <label for="" class="formulario-label">Teléfono</label>
-                <input type="text" class="formulario-input">
-                <label for="" class="formulario-label">Comentarios</label>
-                <input type="submit" class="formulario-submit">
-
+                <button type="button" onclick="getData(alert)" class="formulario-submit">Enviar</button>
             </form>
             <script src="formulario.js"></script>
 
