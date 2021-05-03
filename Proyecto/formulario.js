@@ -8,7 +8,7 @@ for (var i = 0; i < inputs.length; i++) {
         }
     });
 }
-
+//interacción con el formulario, visualización 
 
 var getData = function (){
     var name = document.getElementById("name").value;
@@ -31,6 +31,7 @@ var getData = function (){
         }
     }
 }
+//obtención de datos y escrito en console para ver los mismos
 
 
 

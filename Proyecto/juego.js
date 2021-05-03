@@ -20,14 +20,14 @@ function flipCard() {
   secondCard = this;
   checkForMatch();
 }
-
+//volteo de tarjetas 
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
   isMatch ? disableCards() : unflipCards();
 }
-
+// verificación de match o no
 
 function disableCards() {
   firstCard.removeEventListener('click', flipCard);
@@ -35,7 +35,7 @@ function disableCards() {
 
   resetBoard();
 }
-
+//volteo de tarjeras de acorde al match
 
 function unflipCards() {
   lockBoard = true;
@@ -47,13 +47,13 @@ function unflipCards() {
     resetBoard();
   }, 1500);
 }
-
+//regreo a normalidad de tarjetas si no fué así
 
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
 }
-
+//se voltean de nuevo los pares no matcheados
 
 (function shuffle() {
   cards.forEach(card => {
@@ -61,6 +61,9 @@ function resetBoard() {
     card.style.order = randomPos;
   });
 })();
+//función de orden y acomodo de las 12 tarjetas a utilizar
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+//se agrega función a tarjetas
